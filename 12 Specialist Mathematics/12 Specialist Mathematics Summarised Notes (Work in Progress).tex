@@ -320,6 +320,67 @@ The conjugate of $z$ is:
 }\\
 
 \hrulefill
+\section{Vectors}
+\subsection{Vectors in Space}
+Any point $P$ in space can be specified $(x,y,z)$ corresponding to steps in the $X$, $Y$ and $Z$ direction from the origin $O$.\\
+The position vector of $P$ is
+\begin{align}
+	\overrightarrow{OP}=\begin{pmatrix}x\\ y \\z\end{pmatrix}=x\vec{i}+y\vec{k}+z\vec{k}
+\end{align}
+where $\vec{i}=\big(\begin{smallmatrix}1 \\0 \\0 \end{smallmatrix}\big)$, 
+$\vec{j}=\big(\begin{smallmatrix}0 \\1 \\0 \end{smallmatrix}\big)$, and 
+$\vec{k}=\big(\begin{smallmatrix}0 \\0 \\1 \end{smallmatrix}\big)$, the base unit vectors.
 
+\dotfill
+\subsection{The Magnitude of a Vector}
+The magnitude or length of the vector $\vec{a}=\big(\begin{smallmatrix}a_1 \\a_2 \\a_3 \end{smallmatrix}\big)$ is
+\begin{align}
+	|\vec{a}|=\sqrt{a_1^2+a_2^2+a_3^2}
+\end{align}
+\dotfill
+\subsection{Operations with Vectors}
+\begin{gather}
+	\begin{align}
+		\text{If }\vec{a}=
+		\begin{pmatrix}a_1\\ a_2 \\a_3\end{pmatrix}
+		\text{ and }\vec{b}=
+		\begin{pmatrix}b_1\\ b_2 \\b_3\end{pmatrix}
+		\text{ then:}
+	\end{align}\\
+	\resizebox{.85\linewidth}{!}{
+		\begin{minipage}{\linewidth}
+			\begin{align}
+				&-\vec{a}=\begin{pmatrix}-a_1\\ -a_2 \\-a_3\end{pmatrix}&& &&\vec{a}+\vec{b}=\begin{pmatrix}a_1+b_1\\ a_2+b_2 \\a_3+b_3\end{pmatrix}&\\
+				&\vec{a}-\vec{b}=\begin{pmatrix}a_1-b_1\\ a_2-b_2 \\a_3-b_3\end{pmatrix}&& &&k\vec{a}=\begin{pmatrix}ka_1\\ ka_2 \\ka_3\end{pmatrix}&
+			\end{align}
+		\end{minipage}
+	}
+\end{gather}
+\dotfill
+\subsection{Vector Algebra}
+\begin{itemize}
+	\item $\vec{a}+\vec{b}=\vec{b}+\vec{a}$
+	\item $(\vec{a}+\vec{b})+\vec{c}=\vec{a}+(\vec{b}+\vec{c})$
+	\item $\vec{a}+\vec{0}=\vec{0}+\vec{a}$
+	\item $\vec{a}+(\vec{-a})=(\vec{-a})+\vec{a}=\vec{0}$
+	\item $k(\vec{a}+\vec{b})=k\vec{a}+k\vec{b}$
+	\item $|k\vec{a}|=|k||\vec{a}|$
+	\item If $\vec{x}+\vec{a}=\vec{b}$ then $\vec{x}=\vec{b}=\vec{a}$
+	\item If $k\vec{x}=a,$ $k\neq 0$, then $\vec{x}=\frac{1}{k}\vec{a}$
+\end{itemize}
+\dotfill
+\subsection{Vector Between Two Points}
+If $A(a_1,a_2,a_3)$ and $B(b_1,b_2,b_3)$ then the position vector of $B$ relative to $A$ is 
+\begin{align}
+	\overrightarrow{AB}=\overrightarrow{OB}-\overrightarrow{OA}=\begin{pmatrix}b_1-a_1\\ b_2-a_2 \\b_3-a_3\end{pmatrix}
+\end{align}
+The distance from $A$ to $B$ Is
+\resizebox{.85\linewidth}{!}{
+	\begin{minipage}{\linewidth}
+		\begin{align}
+			|\overrightarrow{AB}|=\sqrt{(b_1-a_1)^2+(b_2-a_2)^2+(b_3-a_3)^2}
+		\end{align}
+	\end{minipage}
+}
 \end{multicols*}
 \end{document}
