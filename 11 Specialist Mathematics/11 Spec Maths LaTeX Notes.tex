@@ -1,0 +1,496 @@
+\documentclass[10pt, a4paper, titlepage]{article}
+\usepackage[portrait, margin=0.8cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{sectsty}
+\usepackage[none]{hyphenat}
+\usepackage{caption}
+\usepackage{subcaption}
+
+%Removes equation label numbers
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
+
+%Removes heading numbers of headers. Disable for numbers and to create table of contents.
+\setcounter{secnumdepth}{0}
+
+%Makes headers and footers empty: removes page numbers
+\pagestyle{empty}
+
+%Sets heading font sizes.
+\sectionfont{\large}
+\subsectionfont{\normalsize}
+
+%Line between columns
+%\setlength{\columnseprule}{0.4pt}
+
+%\setlength{\parskip}{1em}
+
+%Disables paragraph indents
+\setlength{\parindent}{0em}
+
+%Toggle coluumn vertical alignment
+\raggedcolumns
+
+\title{11 Specialist Mathematics Semester 2 Summarised Notes}
+\author{}
+\date{2021}
+\begin{document}
+	
+\maketitle
+
+\begin{multicols*}{3}
+\section{Matrices}
+\subsection{Notation}
+\begin{align}
+	\begin{bmatrix}
+		a & b & c\\
+		d & e & f
+	\end{bmatrix}
+\end{align}
+Order: $2\times 3$
+
+\dotfill
+\subsection{Addition and Subtraction}
+\begin{align}
+	\begin{bmatrix}
+		a & b\\
+		c & d
+	\end{bmatrix}
+	\pm
+	\begin{bmatrix}
+		e & f\\
+		g & h
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		a\pm e & b\pm f\\
+		c\pm g & d\pm h
+	\end{bmatrix}
+\end{align}
+\dotfill
+\subsection{Scalar Multiplication}
+\begin{align}
+	k\times
+	\begin{bmatrix}
+		a & b & c\\
+		d & e & f
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		ka & kb & kc\\
+		kd & ke & kf
+	\end{bmatrix}
+\end{align}
+\dotfill
+\subsection{Matrix Multiplication}
+\begin{align}
+	\begin{bmatrix}
+		a & b\\
+		c & d
+	\end{bmatrix}
+	\begin{bmatrix}
+		w & x\\
+		y & z
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		aw+by & ax+bz\\
+		cw+dy & cx+dz
+	\end{bmatrix}
+\end{align}
+Order:\\
+$n\times m\ \leftarrow$ must match $\rightarrow \ m\times p$\\
+Resultant matrix: $n\times p$\\
+
+\dotfill
+\subsection{Identity Matrix}
+\begin{align}
+	I=
+	\begin{bmatrix}
+		1 & 0\\
+		0 & 1
+	\end{bmatrix}
+	\qquad AI=IA=A
+\end{align}
+
+\dotfill
+\subsection{Inverse of a Matrix}
+\begin{gather}
+	A^{-1}=\frac{1}{ad-bc}
+	\begin{bmatrix}
+		d & -b\\
+		-c & a
+	\end{bmatrix}\\
+	\det{A}=|A|=ad-bc
+\end{gather}
+\begin{itemize}
+	\item If $\det{A}\neq 0$, $A$ is invertible
+	\item If $\det{A}=0$, $A$ is singular
+\end{itemize}
+\begin{align}
+	AA^{-1}=A^{-1}A=I
+\end{align}
+\dotfill
+\subsection{Matrix Algebra}
+\begin{itemize}
+	\item $A+O=O+A=A$ where $O$ is zero/null matrix
+	\item $A+(-A)=(-A)+A=O$
+	\item $A+B$ exists if both have same order
+	\item $A+B=B+A$ \{commutative\}
+	\item $(A+B)+C=A+(B+C)$ \{associative\}
+	\item In general, $AB\neq BA$ \{non-commutative\}
+	\item $(AB)C=A(BC)$ \{associative\}
+	\item $AO=OA=O$
+	\item $AB$ may be $O$ without $A=O$ or $B=O$
+	\item $A(B+C)=AB+AC$ \{distributive law\}
+	\item $AI=IA=A$
+	\item $A^n$ exists provided $A$ is square and $n\in \mathbb{Z}^+$
+	\item $AA^{-1}=A^{-1}A=I$
+	\item $(A^{-1})^{-1}=A$
+	\item $(kA)^{-1}=\frac{1}{k}A^{-1}$
+	\item $(AB)^{-1}=B^{-1}A^{-1}$
+\end{itemize}
+\dotfill
+\subsection{Simultaneous Linear Equations}
+\begin{gather}
+	\begin{cases}
+		2x+3y=4\\
+		5x+4y=17
+	\end{cases}\\
+	\begin{bmatrix}
+		2 & 3\\
+		5 & 4
+	\end{bmatrix}
+	\begin{bmatrix}
+		x\\
+		y
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		4\\
+		17
+	\end{bmatrix}\\
+	AX=B,\ X=A^{-1}B\\
+	\begin{align}
+		\begin{bmatrix}
+			x\\
+			y
+		\end{bmatrix}
+		&=-\frac{1}{7}
+		\begin{bmatrix}
+			4 & -3\\
+			-5 & 2
+		\end{bmatrix}
+		\begin{bmatrix}
+			4\\
+			17
+		\end{bmatrix}\\
+		\begin{bmatrix}
+			x\\
+			y
+		\end{bmatrix}
+		&=
+		\begin{bmatrix}
+			5\\
+			-2
+		\end{bmatrix}
+	\end{align}\\
+	\therefore x=5,\ y=-2
+\end{gather}
+\dotfill
+\subsection{Translations and Lines in 2D}
+\begin{gather}
+	A=\begin{pmatrix}a_1\\ a_2\end{pmatrix}
+	\text{ translated through }
+	b=\begin{pmatrix}b_1\\ b_2\end{pmatrix}\\
+	A'=\begin{pmatrix}a_1+b_1\\ a_2+b_2\end{pmatrix}
+\end{gather}
+Line:
+\begin{align}
+	\begin{pmatrix}x\\ y\end{pmatrix}=\begin{pmatrix}a_1\\ a_2\end{pmatrix}+\lambda \begin{pmatrix}b_1\\ b_2\end{pmatrix}
+\end{align}
+Where $\lambda$ is a parameter\\
+
+\dotfill
+\subsection{Linear Transformations}
+Maps an object initial vector onto its image.\\
+$T$ is a linear transformation if:
+\begin{itemize}
+	\item $T(\vec{u}+\vec{v})=T(\vec{u})+T(\vec{v})$
+	\item $T(k\vec{u})=kT(\vec{u})$
+	\item $T(\vec{0})=\vec{0}$
+	\item $T(-\vec{u})=-T(\vec{u})$
+	\item $T(k_1\vec{u_1}+k_2\vec{u_2}+\dots +k_r\vec{u_r})\\ =k_1T(\vec{u_1})+k_2T(\vec{u_2})+\dots +k_rT(\vec{u_r})$
+\end{itemize}
+\dotfill
+\subsection{Geometric Linear Transformations}
+\begin{gather}
+	\begin{bmatrix}
+		x'\\
+		y'
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		a & b\\
+		c & d
+	\end{bmatrix}
+	\begin{bmatrix}
+		x\\
+		y
+	\end{bmatrix}\\
+	v'=Av,\ v=A^{-1}v'
+\end{gather}
+To transform a function or relation, substitute in $x$ and $y$ from $v$.\\
+
+\dotfill
+\subsection{Rotations About the Origin}
+For a rotation anticlockwise about $O(0,0)$ through $\theta$,
+\begin{align}
+	A=
+	\begin{bmatrix}
+		\cos{\theta} & -\sin{\theta}\\
+		\sin{\theta} & \cos{\theta}
+	\end{bmatrix}
+\end{align}
+with $\det{A}=1$\\
+
+\dotfill
+\subsection{Reflections}
+For a reflection in the mirror line \\$y=(\tan{\alpha})x$,
+\begin{align}
+	A=
+	\begin{bmatrix}
+		\cos{2\alpha} & \sin{2\alpha}\\
+		\sin{2\alpha} & -\cos{2\alpha}
+	\end{bmatrix}
+\end{align}
+with $\det{A}=-1$\\
+If $m=\tan{\alpha}$ then:
+\begin{align}
+	&\cos{2\alpha}=\frac{1-m^2}{1+m^2}&& &&\sin{2\alpha}=\frac{2m}{1+m^2}&\\
+	&\tan{2\alpha}=\frac{2m}{1-m^2}&&	
+\end{align}
+\dotfill
+\subsection{Dilatations}
+For a dilation with scale factor $m$ parallel to the $x$-axis and $k$ parallel to the $y$-axis:
+\begin{align}
+	A=
+	\begin{bmatrix}
+		m & 0\\
+		0 & k
+	\end{bmatrix}
+\end{align}
+\dotfill
+\subsection{Compositions of Transformations}
+If $v$ is transformed under $T_A$ followed by $T_B$,
+\begin{align}
+	v'=BAv
+\end{align}
+The transformation is $T_B\circ T_A$\\
+
+\hrulefill
+\section{Real and Complex Numbers}
+\subsection{Number Sets}
+\begin{flalign}
+	&\mathbb{N}=\{1,2,3,4,\dots\}\text{ natural numbers}&&\\
+	&\mathbb{Z}=\{0,\pm 1,\pm 2,\pm 3,\dots\}\text{ all integers}&&\\
+	&\mathbb{Z}^+=\{1,2,3,\dots\}\text{ positive integers}&&\\
+	&\mathbb{Z}^-=\{-1,-2,-3,\dots\}\text{ negative integers}&&\\
+	&\mathbb{Q}\text{ all rational numbers}&&\\
+	&\mathbb{Q}'\text{ all irrational numbers}&&\\
+	&\mathbb{R}\text{ all real numbers}&&\\
+	&\mathbb{I}\text{ all imaginary numbers}&&\\
+	&\mathbb{C}\text{ all complex numbers}&&
+\end{flalign}
+\dotfill
+\subsection{Real Numbers}
+Numbers that can be placed on a number line.\\
+
+\dotfill
+\subsection{Rational Numbers}
+A real number which can be written in the form $\frac{p}{q}$ where $p,q\in \mathbb{Z}$ and $q\neq 0$. Have a decimal expansion which either terminates or recurs.\\
+
+\dotfill
+\subsection{Irrational Numbers}
+A real number which cannot be written in the form $\frac{p}{q}$ where $p,q\in \mathbb{Z}$ and $q\neq 0$. For example, surds, $(\sqrt{a})$.\\
+
+\dotfill
+\subsection{Interval Notation}
+\begin{align}
+	A=\{x\ |\ a\leq x\leq b,\ x\in \mathbb{R}\}
+\end{align}
+``The set of real numbers $x$ such that $x$ is between $a$ and $b$, including $a$ and $b$."
+\begin{itemize}
+	\item An interval is a connected subset of the number line $\mathbb{R}$.
+	\item An interval is closed if both of its endpoints are included.
+	\item An interval is open if both of its endpoints are not included.
+\end{itemize}
+\begin{align}
+	[a,b]\quad \text{is}\quad \{x\ |\ a\leq x\leq b,\ x\in \mathbb{R}\}\\
+	[a,b)\quad \text{is}\quad \{x\ |\ a\leq x<b,\ x\in \mathbb{R}\}\\
+	(a,b]\quad \text{is}\quad \{x\ |\ a<x\leq b,\ x\in \mathbb{R}\}\\
+	(a,b)\quad \text{is}\quad \{x\ |\ a<x<b,\ x\in \mathbb{R}\}\\
+\end{align}
+\dotfill
+\subsection{Set Notation}
+\begin{align}
+	&\in \quad \text{element of}&& &&\notin \quad \text{not element}&\\
+	&\subset \quad \text{subset}&& &&\not\subset \quad \text{not subset}&\\
+	&\subseteq \quad \text{equal subset}&& &&\varnothing \quad \text{empty set}\\
+	&\cup \quad \text{union}&& &&\cap \quad \text{intersection}&	
+\end{align}
+\dotfill
+\subsection{Imaginary Numbers}
+A number which cannot be placed on a number line in the form $ai$ where $a\in \mathbb{R}$ and $i=\sqrt{-1}$.\\
+
+\dotfill
+\subsection{Complex Numbers}
+Any number in the form $a+bi$ where $a,b\in \mathbb{R}$ and $i=\sqrt{-1}$.
+\begin{gather}
+	\begin{flalign}
+		&\text{If}\quad z=a+bi&&
+	\end{flalign}\\
+	\mathfrak{Re} (z)=a\qquad \mathfrak{Im} (z)=b
+\end{gather}
+\dotfill
+\subsection{Conjugates (Surds)}
+Rationalising the denominator.
+\begin{align}
+	\frac{a+\sqrt{b}}{c+\sqrt{d}}=\frac{a+\sqrt{b}}{c+\sqrt{d}}\times \frac{c-\sqrt{d}}{c-\sqrt{d}}
+\end{align}
+\dotfill
+\subsection{Complex Conjugates}
+\begin{align}
+	z=a+bi\qquad \text{and}\qquad z^*=a-bi
+\end{align}
+are complex conjugates. To write a fraction of two complex numbers with a real denominator:
+\begin{gather}
+	\frac{z}{w}=\frac{z}{w}\times \frac{w^*}{w^*}=\frac{zw^*}{ww^*}\\
+	\frac{a+bi}{c+di}=\frac{a+bi}{c+di}\times \frac{c-di}{c-di}
+\end{gather}
+Properties:
+\begin{itemize}
+	\item $(z^*)^*=z$
+	\item $(z_1+z_2)^*=z_1^*+z_2^*$
+	\item $(z_1z_2)^*=z_1^*\times z_2^*$
+	\item $\left(\frac{z_1}{z_2}\right)^*=\frac{z_1^*}{z_2^*}$
+	\item $(z^n)^*=(z^*)^n,\ n\in \mathbb{Z}^+$
+	\item $z+z^*$ and $zz^*$ are real
+\end{itemize}
+\dotfill
+\subsection{Complex Solutions of Quadratics}
+If a real quadratic equation has $\Delta <0$, and root $c+di$, the other root is its conjugate $c-di$.\\
+Then the equation is:
+\begin{align}
+	a\left(x^2-2cx+\left(c^2+d^2\right)\right)=0,\ a\neq 0
+\end{align}
+For the roots of $ax^2+bx+c=0$:
+\begin{align}
+	\text{sum}=-\frac{b}{a}\qquad \text{product}=\frac{c}{a}
+\end{align}
+\dotfill
+\subsection{Complex Numbers as 2D Vectors}
+Complex numbers can be represented on an Argand diagram where the $x$-axis is the real axis and the $y$-axis is the imaginary axis.
+\begin{align}
+	\overrightarrow{OP}=\begin{pmatrix}x\\ y\end{pmatrix}\quad \text{represents}\quad x+yi
+\end{align}
+\dotfill
+\subsection{Modulus}
+The modulus of the complex number \\$z=a+bi$ is the length of the vector $\big(\begin{smallmatrix}a\\ b\end{smallmatrix}\big)$, which is the real number:
+\begin{align}
+	|z|=\sqrt{a^2+b^2}
+\end{align}
+Properties:
+\begin{itemize}
+	\item $|z^*|=|z|$
+	\item $|z^*|=zz^*$
+	\item $|z_1z_2|=|z_1||z_2|$
+	\item $\left|\frac{z_1}{z_2}\right|^*=\frac{|z_1|}{|z_2|},\ z_2\neq 0$
+	\item $|z_1z_2z_3\dots z_n|=|z_1||z_2||z_3|\dots |z_n|$
+	\item $|z^n|=|z|^n,\ n\in \mathbb{Z}^+$
+\end{itemize}
+\dotfill
+\subsection{Coordinate Geometry}
+\begin{align}
+	\text{If}\quad z_1\equiv \overrightarrow{OP_1}\quad \text{and}\quad z_2\equiv \overrightarrow{OP_2}
+\end{align}
+Distance between $P_1$ and $P_2$ is:
+\begin{align}
+	|z_1-z_2|
+\end{align}
+If $M$ is the midpoint between $P_1$ and $P_2$,
+\begin{align}
+	\overrightarrow{OM}\equiv \frac{z_1+z_2}{2}
+\end{align}
+\hrulefill
+\pagebreak
+\section{Sequences and Series}
+\subsection{Arithmetic Sequences}
+Sequence where each term differs from the previous by a fixed term, the common difference.\\
+First term: $t_1$\\
+Common difference: $d$\\
+General Formula:
+\begin{align}
+	t_n=t_1+(n-1)d
+\end{align}
+\dotfill
+\subsection{Geometric Sequences}
+Sequence where each is the product of the previous term and a fixed common ratio.\\
+First term: $t_1$\\
+Common ratio: $r$\\
+General Formula:
+\begin{align}
+	t_n=t_1r^{n-1}
+\end{align}
+\dotfill
+\subsection{Series}
+A series is the sum of the terms in a sequence.\\
+\underline{Sigma Notation:}
+\begin{align}
+	\sum_{k=1}^nt_k=t_1+t_2+t_3+\dots +t_n
+\end{align}
+Properties:
+\begin{flalign}
+	&\quad \sum_{k=1}^n(a_k+b_k)=\sum_{k=1}^na_k+\sum_{k=1}^nb_k&&\\
+	&\text{If }c \text{ is a constant,}&&\\
+	&\quad \sum_{k=1}^nca_k=c\sum_{k=1}^na_k&&\\
+	&\quad \sum_{k=1}^nc=cn&&
+\end{flalign}
+\dotfill
+\subsection{Arithmetic Series}
+The sum of the terms of an arithmetic sequence.
+\begin{gather}
+	S_n=\sum_{k=1}^n\left(t_1+(k-1)d\right)\\
+	S_n=\frac{n}{2}(t_1+t_n)\\
+	\text{or}\\
+	S_n=\frac{n}{2}(2t_1+(n-1)d)
+\end{gather}
+\dotfill
+\subsection{Geometric Series}
+The sum of the terms of a geometric sequence.
+\begin{gather}
+	S_n=\sum_{k=1}^nt_1r^{k-1}\\
+	S_n=\frac{t_1(r^n-1)}{r-1}\\
+	\text{or}\\
+	S_n=\frac{t_1(1-r^n)}{1-r}\\
+	\begin{flalign}
+		&\qquad r\neq 1&&
+	\end{flalign}
+\end{gather}
+\underline{Sum of Infinite Geometric Series:}\\
+If $|r|<1$, an infinite series of the form
+\begin{align}
+	t_1+t_1r+t_1r^2+\dots =\sum_{k=1}^\infty t_1r^{k-1}
+\end{align}
+will converge to the sum
+\begin{align}
+	S=\frac{t_1}{1-r}
+\end{align}
+\hrulefill
+\end{multicols*}
+\end{document}
