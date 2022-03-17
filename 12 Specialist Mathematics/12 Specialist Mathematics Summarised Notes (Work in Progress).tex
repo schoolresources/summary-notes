@@ -10,6 +10,7 @@
 \usepackage[none]{hyphenat}
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
+\usepackage{physics}
 \usepackage{sectsty}
 \usepackage{subcaption}
 
@@ -162,8 +163,8 @@
 	\subsection{The Principle of Mathematical Induction}
 	Suppose $P_n$ is a proposition which is defines for every integer $n\geq a$, $a\in \mathbb{Z}$. If $P_a$ is true, and if $P_{k+1}$ is true whenever $P_k$ is true, then $P_n$ is true for all $n\geq a$.
 
-	\hrulefill
-	\section{Complex Numbers}
+\hrulefill
+\section{Complex Numbers}
 	\subsection{Imaginary Numbers}
 	A number which cannot be placed on a number line in the form $ai$ where $a\in \mathbb{R}$ and $i=\sqrt{-1}$.\\
 
@@ -197,9 +198,9 @@
 	\begin{align}
 		|z|=\sqrt{a^2+b^2}
 	\end{align}
-	The argument of $z$, $\arg{z}$ is the angle $\theta$ between the positive real axis and $\big(\begin{smallmatrix}a\\ b\end{smallmatrix}\big)$.\\
+	The argument of $z$, $\arg({z})$ is the angle $\theta$ between the positive real axis and $\big(\begin{smallmatrix}a\\ b\end{smallmatrix}\big)$.\\
 	Real numbers have argument of 0 or $\pi$.\\
-	Purely imaginary numbers have arguement of $\frac{\pi}{2}$ or $-\frac{\pi}{2}$.\\
+	Purely imaginary numbers have argument of $\frac{\pi}{2}$ or $-\frac{\pi}{2}$.\\
 
 	\underline{Properties of Modulus:}
 	\begin{itemize}
@@ -232,7 +233,7 @@
 	\begin{align}
 		z=|z|\cis{\theta}
 	\end{align}
-	where $\theta = \arg{z}$.\\
+	where $\theta = \arg({z})$.\\
 	The conjugate of $z$ is:
 	\begin{align}
 		\bar{z}=|z|\cis{-\theta}
@@ -241,7 +242,7 @@
 	\begin{itemize}
 		\item $\cis{\theta}\times \cis{\phi}=\cis{(\theta +\phi )}$
 		\item $\frac{\cis{\theta}}{\cis{\phi}}=\cis{(\theta -\phi )}$
-		\item $\cis{(\theta -k2\pi )}=\cis{\theta},\ k\in \mathbb{Z}$
+		\item $\cis{(\theta -2k\pi )}=\cis{\theta},\ k\in \mathbb{Z}$
 	\end{itemize}
 
 	\dotfill
@@ -387,6 +388,28 @@
 			\end{align}
 		\end{minipage}
 	}
+
+
+\hrulefill
+\section{Integration}
+	\subsection{Integration by Parts}
+	Suppose we have a function in the form $f = u\times v$ where $u$ and $v$ are also functions. We know that to find the derivative of $f$, we utilise the product rule:
+	\begin{align}
+		\dv{f}{x} = \dv{(u \times v)}{x} = u\dv{v}{x} + v\dv{u}{x}
+	\end{align}
+	Then, integrate both sides with respect to x:
+	\begin{align}
+		\int{\dv{(u \times v)}{x} \, \dd x} = \int{u\dv{v}{x} \, \dd x} + \int{v\dv{u}{x} \, \dd x}
+	\end{align}
+	Simplifying, we get:
+	\begin{align}
+		uv = \int{u\dv{v}{x} \, \dd x} + \int{v\dv{u}{x} \, \dd x}
+	\end{align}
+	Rearranging:
+	\begin{align}
+		\int{u\dv{v}{x} \, \dd x} = uv - \int{v\dv{u}{x} \, \dd x}
+	\end{align}
+
 
 \end{multicols*}
 \end{document}
