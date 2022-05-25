@@ -42,7 +42,7 @@
 
 \DeclareMathOperator\cis{cis}
 
-\title{12 Specialist Mathematics Summarised Notes \\ (Work in Progress)}
+\title{12 Specialist Mathematics Summarised Notes \\ (Unofficial) \\ Work in Progress}
 \author{}
 \date{2022}
 
@@ -267,9 +267,9 @@
 	\subsection{Complex Conjugates}
 	The complex conjugate of
 	\begin{align}
-		z=a+bi\qquad \text{is}\qquad \bar{z}=a-bi
+		z=a+bi\qquad \text{is}\qquad z^*=a-bi
 	\end{align}
-	In the complex plane, $\bar{z}$ is the  reflection of $z$ in the real axis.
+	In the complex plane, $z^*$ is the  reflection of $z$ in the real axis.
 
 	\dotfill
 	\subsection{Modulus and Argument}
@@ -283,8 +283,8 @@
 
 	\underline{Properties of Modulus:}
 	\begin{itemize}
-		\item $|\bar{z}|=|z|$
-		\item $|\bar{z}|=z\bar{z}$
+		\item $|z^*|=|z|$
+		\item $|z^*|^2=zz^*$
 		\item $|z_1z_2|=|z_1||z_2|$
 		\item $\left|\frac{z_1}{z_2}\right|=\frac{|z_1|}{|z_2|},\ z_2\neq 0$
 		\item $|z_1z_2z_3\dots z_n|=|z_1||z_2||z_3|\dots |z_n|$
@@ -303,7 +303,7 @@
 	%		&\text{where $\theta = \arg{z}$.}&&\\
 	%		&\text{The conjugate of $z$ is:}&&
 	%	\end{flalign}\\
-	%	\bar{z}=|z|\cis{-\theta}
+	%	z^*=|z|\cis{-\theta}
 	%\end{gather}\\
 	\begin{align}
 		\cis{\theta}=\cos{\theta}+i\sin{\theta}
@@ -315,7 +315,7 @@
 	where $\theta = \arg({z})$.\\
 	The conjugate of $z$ is:
 	\begin{align}
-		\bar{z}=|z|\cis{(-\theta)}
+		z^*=|z|\cis{(-\theta)}
 	\end{align}
 	\underline{Properties of $\cis{\theta}$:}
 	\begin{itemize}
@@ -324,16 +324,29 @@
 		\item $\cis{(\theta -2k\pi )}=\cis{\theta},\ k\in \mathbb{Z}$
 	\end{itemize}
 
-	\dotfill
-	\subsection{Euler's Form}
-	\begin{align}
-		e^{i\theta}=\cos{\theta}+i\sin{\theta}
-	\end{align}
+	%\dotfill
+	%Not in the course
+	%\subsection{Euler's Form}
+	%\begin{align}
+	%	e^{i\theta}=\cos{\theta}+i\sin{\theta}
+	%\end{align}
 	\dotfill
 	\subsection{De Moivre's Theorem}
 	\begin{align}
 		(|z|\cis{\theta})^n=|z|^n\cis{n\theta},\ \text{for all }n\in \mathbb{Q}
 	\end{align}
+	\dotfill
+	\subsection{Roots of Complex Numbers}
+	The $n^{\text{th}}$ roots of the complex number $c$ are the solutions of $z^n=c$.
+
+	\dotfill
+	\subsection{The $n^{\text{th}}$ Roots of Unity}
+	The $n^{\text{th}}$ roots of unity are the solutions of $z^n = 1$.
+	
+	\dotfill
+	\subsection{Distances in the Complex Plane}
+	If $z_1\equiv \overrightarrow{OP_1}$ and $z_2\equiv \overrightarrow{OP_2}$ then $|z_1-z_2|$ is the distance between points $P_1$ and $P_2$.
+
 	\hrulefill
 
 \section{Real Polynomials}
@@ -386,16 +399,17 @@
 	\subsection{The Fundamental Theorem of Algebra}
 	If $P(x)$ is a polynomial of degree $n$, then $P(x)$ has $n$ zeros, each in the form $a+bi$ where $a,b\in \mathbb{R}$, some of which may be repeated.
 	
-	\dotfill
-	\subsection{Sum and Product of Roots}
-	For the polynomial equation
-	\begin{gather}
-		\sum_{r=0}^{n}a_rx^r=0,\quad a_n\neq 0\\
-		\begin{align}
-			\text{Sum of roots: }&\frac{-a_{n-1}}{a_n}\\
-			\text{Product of roots: }&\frac{(-1)^na_0}{a_n}
-		\end{align}	
-	\end{gather}
+	%\dotfill
+	%\subsection{Sum and Product of Roots}
+	%Not in the course
+	%For the polynomial equation
+	%\begin{gather}
+	%	\sum_{r=0}^{n}a_rx^r=0,\quad a_n\neq 0\\
+	%	\begin{align}
+	%		\text{Sum of roots: }&\frac{-a_{n-1}}{a_n}\\
+	%		\text{Product of roots: }&\frac{(-1)^na_0}{a_n}
+	%	\end{align}	
+	%\end{gather}
 	\hrulefill
 
 \section{Vectors}
@@ -403,7 +417,7 @@
 	Any point $P$ in space can be specified $(x,y,z)$ corresponding to steps in the $X$, $Y$ and $Z$ direction from the origin $O$.\\
 	The position vector of $P$ is
 	\begin{align}
-		\overrightarrow{OP}=\begin{pmatrix}x\\ y \\z\end{pmatrix}=x\vec{i}+y\vec{k}+z\vec{k}
+		\overrightarrow{OP}=\begin{pmatrix}x\\ y \\z\end{pmatrix}=x\vec{i}+y\vec{j}+z\vec{k}
 	\end{align}
 	where $\vec{i}=\big(\begin{smallmatrix}1 \\0 \\0 \end{smallmatrix}\big)$, 
 	$\vec{j}=\big(\begin{smallmatrix}0 \\1 \\0 \end{smallmatrix}\big)$, and 
@@ -444,7 +458,7 @@
 		\item $\vec{a}+(\vec{-a})=(\vec{-a})+\vec{a}=\vec{0}$
 		\item $k(\vec{a}+\vec{b})=k\vec{a}+k\vec{b}$
 		\item $|k\vec{a}|=|k||\vec{a}|$
-		\item If $\vec{x}+\vec{a}=\vec{b}$ then $\vec{x}=\vec{b}=\vec{a}$
+		\item If $\vec{x}+\vec{a}=\vec{b}$ then $\vec{x}=\vec{b}-\vec{a}$
 		\item If $k\vec{x}=a,$ $k\neq 0$, then $\vec{x}=\frac{1}{k}\vec{a}$
 	\end{itemize}
 
