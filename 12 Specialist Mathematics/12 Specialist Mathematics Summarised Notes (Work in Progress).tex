@@ -37,7 +37,7 @@
 %Disables paragraph indents
 \setlength{\parindent}{0em}
 
-%Toggle coluumn vertical alignment
+%Toggle column vertical alignment
 \raggedcolumns
 
 \DeclareMathOperator\cis{cis}
@@ -45,6 +45,7 @@
 \title{12 Specialist Mathematics Summarised Notes \\ (Unofficial) \\ Work in Progress}
 \author{}
 \date{2022}
+
 
 \begin{document}
 \maketitle
@@ -58,18 +59,18 @@
 		\text{or}\\
 		f\circ g:x\mapsto f(g(x))
 	\end{gather}
-	In general, $(f\circ g)(x)\neq (g\circ f)(x))$.
+	In general, $(f\circ g)(x)\neq (g\circ f)(x)$.
 
 	\dotfill
 	\subsection{Inverse Functions}
 	An inverse function returns the original value from the output of a function.\\
 	$f(x)$ has an inverse if it is injective (one-to-one), if $f(a)=f(b)$ only when $a=b$, $\therefore$ passes the horizontal line test.\\\\
-	For $f^{-1}(x)$, the inverse of $f(x)$
+	For $f^{-1}(x)$, the inverse of $f(x)$:
 	\begin{itemize}
 		\item Is a reflection of $y=f(x)$ over $y=x$.
 		\item $(f\circ f^{-1})(x)=(f^{-1}\circ f)(x)=x$
-		\item Domain of $f^{-1}=$ Range of $f$.
-		\item Range of $f^{-1}=$ Domain of $f$.
+		\item Domain of $f^{-1}=$ range of $f$.
+		\item Range of $f^{-1}=$ domain of $f$.
 	\end{itemize}
 
 	\dotfill
@@ -81,11 +82,11 @@
 
 	\dotfill
 	\subsection{Reciprocal Functions}
-	A function of the form $f(x)=\frac{k}{x}$, where $k\neq 0$ is a constant.
+	A function of the form $f(x)=\cfrac{k}{x}$, where $k\neq 0$ is a constant.
 
 	\dotfill
 	\subsection{Reciprocal of Other Functions}
-	The reciprocal of a function $f(x)$ is $\frac{1}{f(x)}$.\\\\
+	The reciprocal of a function $f(x)$ is $\frac{1}{f(x)}$.\\
 	\underline{Graphing $y=\frac{1}{f(x)}$ from $y=f(x)$:}
 	\begin{itemize}
 		\item Zero $f(x)\to$ vertical asymp $\frac{1}{f(x)}$
@@ -107,7 +108,7 @@
 	Horizontal asymptote ascertained from behaviour of graph as $|x|\to \infty$.
 	\begin{itemize}
 		\item If the degree of denominator $>$ numerator, horizontal asymptote at $y=0$.
-		\item If the degree of denominator $<$ numerator, function has slated asymptote found through polynomial division.
+		\item If the degree of denominator $<$ numerator, function has slanted asymptote found through polynomial division.
 		\item If the degree of denominator $=$ numerator horizontal asymptote at $y=\frac{a}{b}$ where $a$ and $b$ are the leading coefficients.
 	\end{itemize}
 
@@ -117,8 +118,8 @@
 	\begin{align}
 		|x|=
 		\begin{cases}
-			x\quad \text{if } x\geq 0\\
-			-x\quad \text{if } x\leq 0
+			x\,&\text{if } x\geq 0\\
+			-x\,&\text{if } x < 0 
 		\end{cases}
 	\end{align}
 	Alternatively,
@@ -134,7 +135,7 @@
 	\begin{itemize}
 		\item $|x|\geq0$
 		\item $|x|^2=x^2$
-		\item $\left|\frac{x}{y}\right|=\frac{|x|}{|y|}$
+		\item $\left|\frac{x}{y}\right|=\frac{\left|x\right|}{\left|y\right|}$
 		\item $|-x|=|x|$
 		\item $|xy|=|x||y|$
 		\item $|x-y|=|y-x|$
@@ -157,6 +158,7 @@
 		\item Points on the $x$-axis are invariant
 	\end{itemize}
 	\hrulefill
+
 
 \section{Trigonometric Identities}
 	\subsection{Angle Relationships}
@@ -239,13 +241,14 @@
 
 \section{Mathematical Induction}
 	\subsection{The Principle of Mathematical Induction}
-	Suppose $P_n$ is a proposition which is defines for every integer $n\geq a$, $a\in \mathbb{Z}$. If $P_a$ is true, and if $P_{k+1}$ is true whenever $P_k$ is true, then $P_n$ is true for all $n\geq a$.
+	Suppose $P_n$ is a proposition which is defined for every integer $n\geq a$, $a\in \mathbb{Z}$. If $P_a$ is true, and if $P_{k+1}$ is true whenever $P_k$ is true, then $P_n$ is true for all $n\geq a$.
 
 	\hrulefill
 
+
 \section{Complex Numbers}
 	\subsection{Imaginary Numbers}
-	A number which cannot be placed on a number line in the form $ai$ where $a\in \mathbb{R}$ and $i=\sqrt{-1}$.\\
+	A number which cannot be placed on a real number line in the form $ai$ where $a\in \mathbb{R}$ and $i=\sqrt{-1}$.\\
 
 	\dotfill
 	\subsection{Complex Numbers}
@@ -269,7 +272,7 @@
 	\begin{align}
 		z=a+bi\qquad \text{is}\qquad z^*=a-bi
 	\end{align}
-	In the complex plane, $z^*$ is the  reflection of $z$ in the real axis.
+	In the complex plane, $z^*$ is the reflection of $z$ in the real axis.
 
 	\dotfill
 	\subsection{Modulus and Argument}
@@ -278,7 +281,7 @@
 		|z|=\sqrt{a^2+b^2}
 	\end{align}
 	The argument of $z$, $\arg({z})$ is the angle $\theta$ between the positive real axis and $\big(\begin{smallmatrix}a\\ b\end{smallmatrix}\big)$.\\
-	Real numbers have argument of 0 or $\pi$.\\
+	Real numbers have an argument of 0 or $\pi$.\\
 	Purely imaginary numbers have argument of $\frac{\pi}{2}$ or $-\frac{\pi}{2}$.\\
 
 	\underline{Properties of Modulus:}
@@ -417,33 +420,34 @@
 	Any point $P$ in space can be specified $(x,y,z)$ corresponding to steps in the $X$, $Y$ and $Z$ direction from the origin $O$.\\
 	The position vector of $P$ is
 	\begin{align}
-		\overrightarrow{OP}=\begin{pmatrix}x\\ y \\z\end{pmatrix}=x\vec{i}+y\vec{j}+z\vec{k}
+		\overrightarrow{OP}=\begin{pmatrix}x\\ y \\z\end{pmatrix}=x\vb{i}+y\vb{j}+z\vb{k}
 	\end{align}
-	where $\vec{i}=\big(\begin{smallmatrix}1 \\0 \\0 \end{smallmatrix}\big)$, 
-	$\vec{j}=\big(\begin{smallmatrix}0 \\1 \\0 \end{smallmatrix}\big)$, and 
-	$\vec{k}=\big(\begin{smallmatrix}0 \\0 \\1 \end{smallmatrix}\big)$, the base unit vectors.
+	where $\vb{i}=\big(\begin{smallmatrix}1 \\0 \\0 \end{smallmatrix}\big)$, 
+	$\vb{j}=\big(\begin{smallmatrix}0 \\1 \\0 \end{smallmatrix}\big)$, and 
+	$\vb{k}=\big(\begin{smallmatrix}0 \\0 \\1 \end{smallmatrix}\big)$, the base unit vectors.
 
 	\dotfill
 	\subsection{The Magnitude of a Vector}
-	The magnitude or length of the vector $\vec{a}=\big(\begin{smallmatrix}a_1 \\a_2 \\a_3 \end{smallmatrix}\big)$ is
+	The magnitude or length of the vector $\vb{a}=\big(\begin{smallmatrix}a_1 \\a_2 \\a_3 \end{smallmatrix}\big)$ is
 	\begin{align}
-		|\vec{a}|=\sqrt{a_1^2+a_2^2+a_3^2}
+		|\vb{a}|=\sqrt{a_1^2+a_2^2+a_3^2}
 	\end{align}
+	
 	\dotfill
 	\subsection{Operations with Vectors}
 	\begin{gather}
 		\begin{align}
-			\text{If }\vec{a}=
+			\text{If }\vb{a}=
 			\begin{pmatrix}a_1\\ a_2 \\a_3\end{pmatrix}
-			\text{ and }\vec{b}=
+			\text{ and }\vb{b}=
 			\begin{pmatrix}b_1\\ b_2 \\b_3\end{pmatrix}
 			\text{ then:}
 		\end{align}\\
 		\resizebox{.85\linewidth}{!}{
 			\begin{minipage}{\linewidth}
 				\begin{align}
-					&-\vec{a}=\begin{pmatrix}-a_1\\ -a_2 \\-a_3\end{pmatrix}&& &&\vec{a}+\vec{b}=\begin{pmatrix}a_1+b_1\\ a_2+b_2 \\a_3+b_3\end{pmatrix}&\\
-					&\vec{a}-\vec{b}=\begin{pmatrix}a_1-b_1\\ a_2-b_2 \\a_3-b_3\end{pmatrix}&& &&k\vec{a}=\begin{pmatrix}ka_1\\ ka_2 \\ka_3\end{pmatrix}&
+					&-\vb{a}=\begin{pmatrix}-a_1\\ -a_2 \\-a_3\end{pmatrix}&& &&\vb{a}+\vb{b}=\begin{pmatrix}a_1+b_1\\ a_2+b_2 \\a_3+b_3\end{pmatrix}&\\
+					&\vb{a}-\vb{b}=\begin{pmatrix}a_1-b_1\\ a_2-b_2 \\a_3-b_3\end{pmatrix}&& &&k\vb{a}=\begin{pmatrix}ka_1\\ ka_2 \\ka_3\end{pmatrix}&
 				\end{align}
 			\end{minipage}
 		}
@@ -452,14 +456,14 @@
 	\dotfill
 	\subsection{Vector Algebra}
 	\begin{itemize}
-		\item $\vec{a}+\vec{b}=\vec{b}+\vec{a}$
-		\item $(\vec{a}+\vec{b})+\vec{c}=\vec{a}+(\vec{b}+\vec{c})$
-		\item $\vec{a}+\vec{0}=\vec{0}+\vec{a}$
-		\item $\vec{a}+(\vec{-a})=(\vec{-a})+\vec{a}=\vec{0}$
-		\item $k(\vec{a}+\vec{b})=k\vec{a}+k\vec{b}$
-		\item $|k\vec{a}|=|k||\vec{a}|$
-		\item If $\vec{x}+\vec{a}=\vec{b}$ then $\vec{x}=\vec{b}-\vec{a}$
-		\item If $k\vec{x}=a,$ $k\neq 0$, then $\vec{x}=\frac{1}{k}\vec{a}$
+		\item $\vb{a}+\vb{b}=\vb{b}+\vb{a}$
+		\item $(\vb{a}+\vb{b})+\vb{c}=\vb{a}+(\vb{b}+\vb{c})$
+		\item $\vb{a}+\vb{0}=\vb{0}+\vb{a}$
+		\item $\vb{a}+(\vb{-a})=(\vb{-a})+\vb{a}=\vb{0}$
+		\item $k(\vb{a}+\vb{b})=k\vb{a}+k\vb{b}$
+		\item $|k\vb{a}|=|k||\vb{a}|$
+		\item If $\vb{c}+\vb{a}=\vb{b}$ then $\vb{c}=\vb{b}-\vb{a}$
+		\item If $k\vb{b}=a,$ $k\neq 0$, then $\vb{b}=\frac{1}{k}\vb{a}$
 	\end{itemize}
 
 	\dotfill
