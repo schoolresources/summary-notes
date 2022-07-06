@@ -436,21 +436,21 @@
 	\dotfill
 	\subsection{Operations with Vectors}
 	\begin{gather}
-		\begin{align}
-			\text{If }\vb{a}=
-			\begin{pmatrix}a_1\\ a_2 \\a_3\end{pmatrix}
-			\text{ and }\vb{b}=
-			\begin{pmatrix}b_1\\ b_2 \\b_3\end{pmatrix}
-			\text{ then:}
-		\end{align}\\
-		\resizebox{.85\linewidth}{!}{
-			\begin{minipage}{\linewidth}
-				\begin{align}
-					&-\vb{a}=\begin{pmatrix}-a_1\\ -a_2 \\-a_3\end{pmatrix}&& &&\vb{a}+\vb{b}=\begin{pmatrix}a_1+b_1\\ a_2+b_2 \\a_3+b_3\end{pmatrix}&\\
-					&\vb{a}-\vb{b}=\begin{pmatrix}a_1-b_1\\ a_2-b_2 \\a_3-b_3\end{pmatrix}&& &&k\vb{a}=\begin{pmatrix}ka_1\\ ka_2 \\ka_3\end{pmatrix}&
-				\end{align}
-			\end{minipage}
-		}
+	\begin{align}
+		\text{If }\vb{a}=
+		\begin{pmatrix}a_1\\ a_2 \\a_3\end{pmatrix}
+		\text{ and }\vb{b}=
+		\begin{pmatrix}b_1\\ b_2 \\b_3\end{pmatrix}
+		\text{ then:}
+	\end{align}\\
+	\resizebox{.85\linewidth}{!}{
+		\begin{minipage}{\linewidth}
+			\begin{align}
+				&-\vb{a}=\begin{pmatrix}-a_1\\ -a_2 \\-a_3\end{pmatrix}&& &&\vb{a}+\vb{b}=\begin{pmatrix}a_1+b_1\\ a_2+b_2 \\a_3+b_3\end{pmatrix}&\\
+				&\vb{a}-\vb{b}=\begin{pmatrix}a_1-b_1\\ a_2-b_2 \\a_3-b_3\end{pmatrix}&& &&k\vb{a}=\begin{pmatrix}ka_1\\ ka_2 \\ka_3\end{pmatrix}&
+			\end{align}
+		\end{minipage}
+	}
 	\end{gather}
 
 	\dotfill
@@ -472,7 +472,7 @@
 	\begin{align}
 		\overrightarrow{AB}=\overrightarrow{OB}-\overrightarrow{OA}=\begin{pmatrix}b_1-a_1\\ b_2-a_2 \\b_3-a_3\end{pmatrix}
 	\end{align}
-	The distance from $A$ to $B$ Is
+	The distance from $A$ to $B$ is
 	\resizebox{.85\linewidth}{!}{
 		\begin{minipage}{\linewidth}
 			\begin{align}
@@ -480,11 +480,35 @@
 			\end{align}
 		\end{minipage}
 	}\\
+	
+	\dotfill
+	\subsection{Unit Vector}
+	For a vector $\vb{u}$, the unit vector would be:
+	\begin{equation}
+		\hat{\vb{u}} = \frac{\vb{u}}{|\vb{u}|}
+	\end{equation}
+
+	\dotfill
+	\subsection{Dot Product (Scalar Product)}
+	The algebraic definition of the dot product is defined as thus:
+	\begin{equation}
+		\vb{a} \cdot \vb{b} = \sum_{i=1}^{n} a_i b_i
+	\end{equation}
+	The geometric definition is as follows:
+	\begin{equation}
+		\vb{a} \cdot \vb{b} = |\vb{a}||\vb{b}|\cos\theta
+	\end{equation}
+
+	\dotfill
+	\subsection{Properties of the Dot Product}
+	\begin{itemize}
+		\item $\vb{a}\cdot\vb{b} = \vb{b}\cdot\vb{a}$
+		\item $\vb{a}\cdot\vb{a} = |\vb{a}|^2$
+		\item $\vb{a}\cdot(\vb{b}+\vb{c})=\vb{a}\cdot\vb{b}+\vb{a}\cdot\vb{c}$
+		\item $\lambda(\vb{a}\cdot\vb{b})=(\lambda\vb{a})\cdot\vb{b}=\vb{a}\cdot(\lambda\vb{b}), \,\lambda\in\mathbb{R}$
+	\end{itemize}
 
 	\hrulefill
-
-
-
 
 
 %\pagebreak
