@@ -1,52 +1,67 @@
 \documentclass[10pt, a4paper, titlepage]{article}
 
-\usepackage{amsmath}
-\usepackage{amssymb}
+% ---
+% --- Formatting
+\usepackage[portrait, margin=0.8cm]{geometry}
 \usepackage{caption}
 \usepackage{float}
-\usepackage[portrait, margin=0.8cm]{geometry}
-\usepackage{graphicx}
-\graphicspath{{images/}}
 \usepackage[none]{hyphenat}
-\usepackage[utf8]{inputenc}
 \usepackage{multicol}
-\usepackage{physics}
 \usepackage{sectsty}
 \usepackage{subcaption}
 
-%Removes equation label numbers
-\makeatletter
-\renewcommand\tagform@[1]{}
-\makeatother
-
-%Removes heading numbers of headers. Disable for numbers and to create table of contents.
+% Removes heading numbers of headers. Disable for numbers and to create a table of contents.
 \setcounter{secnumdepth}{0}
 
-%Makes headers and footers empty: removes page numbers
+% Makes headers and footers empty: removes page numbers
 \pagestyle{empty}
 
-%Sets heading font sizes.
-\sectionfont{\large}
-\subsectionfont{\normalsize}
-
-%Line between columns
+% Line between columns
 %\setlength{\columnseprule}{0.4pt}
 
 %\setlength{\parskip}{1em}
 
-%Disables paragraph indents
+% Disables paragraph indents
 \setlength{\parindent}{0em}
 
-%Toggle column vertical alignment
+% Toggle column vertical alignment
 \raggedcolumns
 
-\title{12 Mathematical Methods Summarised Notes \\ (Unofficial)}
-\author{}
-\date{Last updated: July 2022}
+
+% ---
+% --- Typography
+\usepackage[utf8]{inputenc}
+
+% Sets heading font sizes.
+\sectionfont{\large}
+\subsectionfont{\normalsize}
+
+% ---
+% --- Graphics
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+
+% ---
+% --- Math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+
+% Removes equation label numbers
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
 
 
 \begin{document}
+
+\title{12 Mathematical Methods Summarised Notes \\ (Unofficial)}
+\author{}
+\date{Last updated: August 2022}
 \maketitle
+
+% Content begins below
 \begin{multicols*}{3}
 
 \section{Differential Calculus}
@@ -157,7 +172,7 @@
 		\item Find $y$-coordinate $y=f(a)$ and gradient $m=f'(a)$.
 		\item Substitute values into $y=mx+c$ to find $c$.
 	\end{enumerate}
-	Or use general formula:
+	Or use the general formula:
 	\begin{align}
 		y=f'(a)(x-a)+f(a)
 	\end{align}
@@ -473,6 +488,7 @@
 	\begin{align}
 		X\sim B(n,p)
 	\end{align}
+	where $\sim$ reads ``is distributed as''
 	\begin{flalign}
 		&\text{Mean:}\quad E(X)=\mu = np&&\\
 		&\text{Variance:}\quad \text{Var}(X)=\sigma ^2=np(1-p)&&\\
@@ -518,7 +534,7 @@
 	\end{align}
 	\begin{itemize}
 		\item Symmetric about the mean
-		\item Bell shaped curve
+		\item Bell-shaped curve
 		\item Asymptotic to the $x$-axis
 		\item Empirical rule (``68-95-99" rule)
 		\item Inflection point one $\sigma$ from the mean
@@ -568,7 +584,7 @@
 
 	\dotfill
 	\subsection{Central Limit Theorem}
-	Suppose $X$ is a random variable which is not necessarily normally distributed. $X$ has population mean $\mu$ and standard deviation $\sigma$.\\\\
+	Suppose $X$ is a random variable that is not necessarily normally distributed. $X$ has population mean $\mu$ and standard deviation $\sigma$.\\\\
 	For Sufficient large $n$ (generally $n\geq 30$), $\bar{X}_n$ is approximately normally distributed.
 	\begin{flalign}
 		&\text{Mean:}\quad \mu _{\bar{X}_n}=\mu&&\\
