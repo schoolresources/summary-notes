@@ -610,6 +610,103 @@
 	\begin{align}
 		d=\frac{|(\vb{a_1}-\vb{a_2})\cdot(\vb{b_1}\times\vb{b_2})|}{|\vb{b_1}\times\vb{b_2}|}
 	\end{align}
+
+	\dotfill
+	\subsection{Planes}
+	A plane is a flat surface that extends forever and has zero thickness.
+	\underline{The Vector Equation of a Plane}
+	\begin{align}
+		\vb{r}=\vb{a}+s\vb{v}+t\vb{w}
+	\end{align}
+	\begin{itemize}
+		\item $\vb{r}$ is the position vector of any point on the plane.
+		\item $\vb{a}$ is the position vector of a known point on the plane.
+		\item $\vb{v}$ and $\vb{w}$ are any two non-parallel vectors which are parallel to the plane.
+		\item $s,t\in\mathbb{R}$ are two independent parameters.
+	\end{itemize}
+	\underline{The Normal of a Plane}\\
+	A vector is normal to a plane if it is perpendicular to all vectors which are parallel to the plane. If $\vb{n}$ is a normal to a plane such as $\vb{n}=\vb{v}\times\vb{w}$, an equivalent vector equation of a plane is
+	\begin{align}
+		\vb{n}\cdot(\vb{r}-\vb{a})\qquad\text{or}\qquad\vb{r}\cdot\vb{n}=\vb{a}\cdot\vb{n}
+	\end{align}
+	\underline{The Cartesian Equation of a Plane}\\
+	If a plane has normal vector $\vb{n}=\big(\begin{smallmatrix}a \\b \\c \end{smallmatrix}\big)$
+	and passes through $P(X,Y,Z)$ then is has equation
+	\begin{align}
+		ax+by+cz=aX=bY=cZ=d
+	\end{align}
+	where $d$ is a constant.\\
+
+	\underline{Distance Between a Point and a Plane}
+	The distance between a point $P(x_1,y_1,z_1)$ and  the plane \\$Ax+By+Cz+D=0$ is
+	\begin{align}
+		d=\frac{|Ax_1+Bx_1+Cx_1|}{\sqrt{A^2+B^2+C^2}}
+	\end{align}
+
+	\subsection{Angles in Space}
+	\underline{The Angle Between a Line and a Plane}\\
+	The acute angle $\phi$ between a line with direction vector $\vb{a}$ and a plane with normal vector $\vb{n}$ is
+	\begin{align}
+		\phi=\sin^{-1}{\left(\frac{|\vb{n}\cdot\vb{b}|}{|\vb{n}||\vb{b}|}\right)}
+	\end{align}
+	\underline{The Angle Between Two Planes}\\
+	If two planes have normal vectors $\vb{n_1}$ and $\vb{n_2}$ and $\theta$ is the acute angle between them then
+	\begin{align}
+		\theta=\cos^{-1}{\left(\frac{|\vb{n_1}\cdot\vb{n_2}|}{|\vb{n_1}||\vb{n_2}|}\right)}
+	\end{align}
+
+	\dotfill
+	\subsection{Row Reduction}
+	Linear systems of equations can be solved using augmented matrices. A general $3\times 3$ system has the form:
+	\begin{align}
+		\begin{cases}
+			a_1x+b_1y+c_1z=d_1\\
+			a_2x+b_2y+c_2z=d_2\\
+			a_3x+b_3y+c_3z=d_3
+		\end{cases}
+	\end{align}
+	In augmented matrix form, the system is:
+	\begin{align}
+		\left[
+			\begin{array}{ccc|c}
+				a_1 & b_1 & c_1 & d_1\\
+				a_2 & b_2 & c_2 & d_2\\
+				a_3 & b_3 & c_3 & d_3
+			\end{array}
+		\right]
+	\end{align}
+	Using row operations it is reduced to the echelon form.
+	\begin{align}
+		\left[
+			\begin{array}{ccc|c}
+				a & b & c & d\\
+				0 & e & f & g\\
+				0 & 0 & h & i
+			\end{array}
+		\right]
+	\end{align}
+	$\therefore hz=i\Rightarrow z=\frac{i}{h}$, $ey+fz=g$ and $ax+by+cz=d$
+
+	\dotfill
+	\subsection{Intersecting Planes}
+	Two planes in space could have the following arrangements:
+	\begin{itemize}
+		\item Intersecting
+		\item Parallel
+		\item Coincident
+	\end{itemize}
+	Three planes in space could have the following arrangements:
+	\begin{itemize}
+		\item All coincident
+		\item Two coincident and one intersecting
+		\item Two coincident and one parallel
+		\item Two parallel and one intersecting
+		\item All parallel
+		\item All meet at one point
+		\item All meet in a common line
+		\item The line of intersection of any two planes is parallel to the third plane.
+	\end{itemize}
+
 	\hrulefill
 
 
