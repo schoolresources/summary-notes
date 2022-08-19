@@ -483,6 +483,14 @@
 			\end{align}
 		\end{minipage}
 	}\\
+
+	\dotfill
+	\subsection{Parallelism}
+	$\vb{a}=k\vb{b}\iff\vb{a}$ and $\vb{b}$ are non-zero parallel vectors.
+
+	\dotfill
+	\subsection{Collinear Points}
+	$A$, $B$ and $C$ are collinear if $\overrightarrow{AB}=k\overrightarrow{BC}$.
 	
 	\dotfill
 	\subsection{Unit Vectors}
@@ -540,6 +548,68 @@
 		\item $|\vb{a}\cdot\vb{b}|=|\vb{a}||\vb{b}|\iff$ $\vb{a}$ and $\vb{b}$ are non-zero parallel vectors.
 		\item Given $\vb{a}\cdot\vb{b}=|\vb{a}||\vb{b}|\cos{\theta}$\\ If $\theta$ is acute, $\cos{\theta}>0$ and so $\vb{a}\cdot\vb{b}>0$\\ If $\theta$ is obtuse, $\cos{\theta}<0$ and so $\vb{a}\cdot\vb{b}<0$
 	\end{itemize}
+
+	\dotfill
+	\subsection{Cross Product (Vector Product)}
+	The vector cross product of $\vb{a}=\big(\begin{smallmatrix}a_1 \\a_2 \\a_3 \end{smallmatrix}\big)$
+	and $\vb{b}=\big(\begin{smallmatrix}b_1 \\b_2 \\b_3 \end{smallmatrix}\big)$ is
+	\begin{align}
+		\vb{a}\times\vb{b}=\begin{pmatrix}a_2b_3-a_3b_2\\ a_3b_1-a_1b_3 \\a_1b_2-a_2b_1\end{pmatrix}
+	\end{align}
+	Alternatively,
+	\begin{gather}
+		\vb{a}\times\vb{b}=\begin{vmatrix}\vb{i} & \vb{j} & \vb{k} \\ a_1 & a_2 & a_3 \\ b_1 & b_2 & b_3\end{vmatrix}\\
+		=\begin{vmatrix}a_2 & a_3 \\ b_2 & b_3\end{vmatrix}\vb{i}-\begin{vmatrix}a_1 & a_3 \\ b_1 & b_3\end{vmatrix}\vb{j}+\begin{vmatrix}a_1 & a_2 \\ b_1 & b_2\end{vmatrix}\vb{k}
+	\end{gather}
+	\underline{Properties}
+	\begin{itemize}
+		\item $\vb{a}\times\vb{b}$ is a vector perpendicular to both $\vb{a}$ and $\vb{b}$.
+		\item $\vb{a}\times\vb{a}=\vb{0}$ for all $\vb{a}$
+		\item $\vb{a}\times\vb{b}=-\vb{b}\times\vb{a}$, $\therefore\vb{a}\times\vb{b}$ and $\vb{b}\times\vb{a}$ hav equal length but opposite direction.
+		\item $\vb{a}\cdot(\vb{b}\times\vb{c})$ is called the scalar triple prodcut.
+		\item $\vb{a}\times(\vb{b}\times\vb{c})=\vb{a}\times\vb{b}+\vb{a}\times\vb{c}$
+		\item $(\vb{a}+\vb{b})\times(\vb{c}+\vb{d})\\=\vb{a}\times\vb{c}+\vb{a}\times\vb{d}+\vb{b}\times\vb{c}+\vb{b}\times\vb{d}$
+	\end{itemize}
+	\underline{Direction of $\vb{a}\times\vb{b}$}
+	\begin{align}
+		|\vb{a}\times\vb{b}|=|\vb{a}||\vb{b}|\sin{\theta}
+	\end{align}
+	where $\theta$ is the angle between $\vb{a}$ and $\vb{b}$.
+
+	\dotfill
+	\subsection{Area}
+	If a triangle has defining vectors $\vb{a}$ and $\vb{b}$ then its area is $\frac{1}{2}|\vb{a}\times\vb{b}|$ units$^2$.\\
+	If a parallelogram has defining vectors $\vb{a}$ and $\vb{b}$ then its area is $|\vb{a}\times\vb{b}|$ units$^2$.
+	
+	\dotfill
+	\subsection{Lines in 2 and 3 Dimensions}
+	$\vb{r}=\vb{a}+\lambda\vb{b},\ \lambda\in\mathbb{R}$ is the vector equation of the line.
+
+	\dotfill
+	\subsection{The Shortest Distance From a Point to a Line}
+	A point $P$ is closest to a point $R$ on a line in direction $\vb{b}$ when $\overrightarrow{PR}$ is perpendicular to $\vb{b}$.
+	\begin{align}
+		\overrightarrow{PR}\cdot\vb{b}=0
+	\end{align}
+
+	\dotfill
+	\subsection{Relationships Between Lines}
+	\underline{Line Classification in 2 Dimensions}
+	\begin{itemize}
+		\item Intersecting: Unique solution
+		\item Parallel: No solutions
+		\item Coincident: Infinite Solutions
+	\end{itemize}
+	\underline{Line Classification in 3 Dimensions}
+	\begin{itemize}
+		\item Lines are coplanar if the lie in the same plane. In this case they may be intersecting, parallel or coincident.
+		\item Otherwise, they are skew.
+	\end{itemize}
+	\underline{Shortest Distance Between Skew Lines}
+	For two skew lines with vector equations $\vb{r_1}=\vb{a_1}+\lambda\vb{b_1}$ and $\vb{r_2}=\vb{a_2}+\mu\vb{b_2}$, the shortest distance $d$ between them is
+	\begin{align}
+		d=\frac{|(\vb{a_1}-\vb{a_2})\cdot(\vb{b_1}\times\vb{b_2})|}{|\vb{b_1}\times\vb{b_2}|}
+	\end{align}
 	\hrulefill
 
 
