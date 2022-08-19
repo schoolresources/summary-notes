@@ -461,12 +461,12 @@
 	\begin{itemize}
 		\item $\vb{a}+\vb{b}=\vb{b}+\vb{a}$
 		\item $(\vb{a}+\vb{b})+\vb{c}=\vb{a}+(\vb{b}+\vb{c})$
-		\item $\vb{a}+\vb{0}=\vb{0}+\vb{a}$
+		\item $\vb{a}+\vb{0}=\vb{0}+\vb{a}=\vb{a}$
 		\item $\vb{a}+(\vb{-a})=(\vb{-a})+\vb{a}=\vb{0}$
 		\item $k(\vb{a}+\vb{b})=k\vb{a}+k\vb{b}$
 		\item $|k\vb{a}|=|k||\vb{a}|$
-		\item If $\vb{c}+\vb{a}=\vb{b}$ then $\vb{c}=\vb{b}-\vb{a}$
-		\item If $k\vb{b}=\vb{a},$ $k\neq 0$, then $\vb{b}=\frac{1}{k}\vb{a}$
+		\item If $\vb{a}+\vb{b}=\vb{c}$, then $\vb{a}=\vb{c}-\vb{b}$
+		\item If $k\vb{a}=\vb{b},$ $k\neq 0$, then $\vb{a}=\frac{1}{k}\vb{b}$
 	\end{itemize}
 
 	\dotfill
@@ -485,32 +485,61 @@
 	}\\
 	
 	\dotfill
-	\subsection{Unit Vector}
-	For a vector $\vb{u}$, the unit vector would be:
-	\begin{equation}
-		\hat{\vb{u}} = \frac{\vb{u}}{|\vb{u}|}
-	\end{equation}
+	\subsection{Unit Vectors}
+	The unit vector $\hat{\vb{v}}$, a vector of length 1 in the direction of $\vb{v}$ is
+	\begin{align}
+		\hat{\vb{v}} = \frac{1}{|\vb{v}|}\vb{v}
+	\end{align}
+
+	%\dotfill
+	%\subsection{Dot Product (Scalar Product)}
+	%The algebraic definition of the dot product is defined as thus:
+	%\begin{equation}
+	%	\vb{a} \cdot \vb{b} = \sum_{i=1}^{n} a_i b_i
+	%\end{equation}
+	%The geometric definition is as follows:
+	%\begin{equation}
+	%	\vb{a} \cdot \vb{b} = |\vb{a}||\vb{b}|\cos\theta
+	%\end{equation}
+	%
+	%\dotfill
+	%\subsection{Properties of the Dot Product}
+	%\begin{itemize}
+	%	\item $\vb{a}\cdot\vb{b} = \vb{b}\cdot\vb{a}$
+	%	\item $\vb{a}\cdot\vb{a} = |\vb{a}|^2$
+	%	\item $\vb{a}\cdot(\vb{b}+\vb{c})=\vb{a}\cdot\vb{b}+\vb{a}\cdot\vb{c}$
+	%	\item $\lambda(\vb{a}\cdot\vb{b})=(\lambda\vb{a})\cdot\vb{b}=\vb{a}\cdot(\lambda\vb{b}), \,\lambda\in\mathbb{R}$
+	%\end{itemize}
 
 	\dotfill
 	\subsection{Dot Product (Scalar Product)}
-	The algebraic definition of the dot product is defined as thus:
-	\begin{equation}
-		\vb{a} \cdot \vb{b} = \sum_{i=1}^{n} a_i b_i
-	\end{equation}
-	The geometric definition is as follows:
-	\begin{equation}
-		\vb{a} \cdot \vb{b} = |\vb{a}||\vb{b}|\cos\theta
-	\end{equation}
-
-	\dotfill
-	\subsection{Properties of the Dot Product}
+	If $\vb{a}=\big(\begin{smallmatrix}a_1 \\a_2 \\a_3 \end{smallmatrix}\big)$
+	and $\vb{b}=\big(\begin{smallmatrix}b_1 \\b_2 \\b_3 \end{smallmatrix}\big)$,
+	then the scalar dot product is defined as
+	\begin{align}
+		\vb{a}\cdot\vb{b}=a_1b_1+a_2b_2+a_3b_3
+	\end{align}
+	\underline{Properties}
 	\begin{itemize}
 		\item $\vb{a}\cdot\vb{b} = \vb{b}\cdot\vb{a}$
 		\item $\vb{a}\cdot\vb{a} = |\vb{a}|^2$
 		\item $\vb{a}\cdot(\vb{b}+\vb{c})=\vb{a}\cdot\vb{b}+\vb{a}\cdot\vb{c}$
-		\item $\lambda(\vb{a}\cdot\vb{b})=(\lambda\vb{a})\cdot\vb{b}=\vb{a}\cdot(\lambda\vb{b}), \,\lambda\in\mathbb{R}$
+		\item $(\vb{a}+\vb{b})\cdot(\vb{c}+\vb{d})=\vb{a}\cdot\vb{c}+\vb{a}\cdot\vb{d}+\vb{b}\cdot\vb{c}+\vb{b}\cdot\vb{d}$
+		\item $k(\vb{a}\cdot\vb{b})=(k\vb{a})\cdot\vb{b}=\vb{a}\cdot(k\vb{b}), \,k\in\mathbb{R}$
 	\end{itemize}
 
+	\dotfill
+	\subsection{The Angle Between Two Vectors}
+	The angle $\theta$ between two vectors $\vb{a}$ and $\vb{b}$ cacn be found using
+	\begin{align}
+		\cos{\theta}=\frac{\vb{a}\cdot\vb{b}}{|\vb{a}||\vb{b}|}
+	\end{align}
+	\underline{Scalar Product Geometric Properties}
+	\begin{itemize}
+		\item For non-zero vectors $\vb{a}$ and $\vb{b}$:\\ $\vb{a}\cdot\vb{b}=0\iff$ $\vb{a}$ and $\vb{b}$ are perpendicular.
+		\item $|\vb{a}\cdot\vb{b}|=|\vb{a}||\vb{b}|\iff$ $\vb{a}$ and $\vb{b}$ are non-zero parallel vectors.
+		\item Given $\vb{a}\cdot\vb{b}=|\vb{a}||\vb{b}|\cos{\theta}$\\ If $\theta$ is acute, $\cos{\theta}>0$ and so $\vb{a}\cdot\vb{b}>0$\\ If $\theta$ is obtuse, $\cos{\theta}<0$ and so $\vb{a}\cdot\vb{b}<0$
+	\end{itemize}
 	\hrulefill
 
 
