@@ -567,7 +567,7 @@
 		\item $\vb{a}\times\vb{a}=\vb{0}$ for all $\vb{a}$
 		\item $\vb{a}\times\vb{b}=-\vb{b}\times\vb{a}$, $\therefore\vb{a}\times\vb{b}$ and $\vb{b}\times\vb{a}$ hav equal length but opposite direction.
 		\item $\vb{a}\cdot(\vb{b}\times\vb{c})$ is called the scalar triple prodcut.
-		\item $\vb{a}\times(\vb{b}\times\vb{c})=\vb{a}\times\vb{b}+\vb{a}\times\vb{c}$
+		\item $\vb{a}\times(\vb{b}+\vb{c})=\vb{a}\times\vb{b}+\vb{a}\times\vb{c}$
 		\item $(\vb{a}+\vb{b})\times(\vb{c}+\vb{d})\\=\vb{a}\times\vb{c}+\vb{a}\times\vb{d}+\vb{b}\times\vb{c}+\vb{b}\times\vb{d}$
 	\end{itemize}
 	\underline{Direction of $\vb{a}\times\vb{b}$}
@@ -851,14 +851,38 @@
 	Upper function: $f(x)$ or $y_U$\\
 	Lower function: $g(x)$ or $y_L$
 	\begin{align}
-		A=\int_{a}^{b}\left(\left[f(x)\right]^2-\left[g(x)\right]^2\right)\,\dd{x}
+		V=\int_{a}^{b}\left(\left[f(x)\right]^2-\left[g(x)\right]^2\right)\,\dd{x}
 	\end{align}
 	\begin{center}
 		or
 	\end{center}
 	\begin{align}
-		A=\int_{a}^{b}\left(y_U^2-y_L^2\right)\,\dd{x}
+		V=\int_{a}^{b}\left(y_U^2-y_L^2\right)\,\dd{x}
 	\end{align}
 
+	\pagebreak
+	\section{Rates of Change and Differential Equations}
+	\subsection{Implicit Differentiation}
+	To find $\frac{dy}{dx}$ for an implicit relationship between $x$ and $y$. A useful property is
+	\begin{gather}
+		\begin{align}
+			\dv{x}\left[x^n\right]=nx^{n-1}
+		\end{align}\\
+		and\\
+		\begin{align}
+			\dv{x}\left[y^n\right]=nx^{n-1}\dv{y}{x}
+		\end{align}
+	\end{gather}
+
+	\dotfill
+	\subsection{Related Rates}
+
+	\dotfill
+	\subsection{Differential Equations}
+	A differential equation is an equation that describes the relationship between a function and its derivatives.
+
+	\dotfill
+	\subsection{Differential Equations of the Form $\dv{y}{x}=f(x)$}
+	
 \end{multicols*}
 \end{document}
