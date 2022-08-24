@@ -1,54 +1,69 @@
 \documentclass[10pt, a4paper, titlepage]{article}
 
-\usepackage{amsmath}
-\usepackage{amssymb}
+% ---
+% --- Formatting
+\usepackage[portrait, margin=0.8cm]{geometry}
 \usepackage{caption}
 \usepackage{float}
-\usepackage[portrait, margin=0.8cm]{geometry}
-\usepackage{graphicx}
-\graphicspath{{images/}}
 \usepackage[none]{hyphenat}
-\usepackage[utf8]{inputenc}
 \usepackage{multicol}
-\usepackage{physics}
 \usepackage{sectsty}
 \usepackage{subcaption}
 
-%Removes equation label numbers
-\makeatletter
-\renewcommand\tagform@[1]{}
-\makeatother
-
-%Removes heading numbers of headers. Disable for numbers and to create table of contents.
+% Removes heading numbers of headers. Disable for numbers and to create a table of contents.
 \setcounter{secnumdepth}{0}
 
-%Makes headers and footers empty: removes page numbers
+% Makes headers and footers empty: removes page numbers
 \pagestyle{empty}
 
-%Sets heading font sizes.
-\sectionfont{\large}
-\subsectionfont{\normalsize}
-
-%Line between columns
+% Line between columns
 %\setlength{\columnseprule}{0.4pt}
 
 %\setlength{\parskip}{1em}
 
-%Disables paragraph indents
+% Disables paragraph indents
 \setlength{\parindent}{0em}
 
-%Toggle column vertical alignment
+% Toggle column vertical alignment
 \raggedcolumns
+
+
+% ---
+% --- Typography
+\usepackage[utf8]{inputenc}
+
+% Sets heading font sizes.
+\sectionfont{\large}
+\subsectionfont{\normalsize}
+
+% ---
+% --- Graphics
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+
+% ---
+% --- Math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+
+% Removes equation label numbers
+\makeatletter
+\renewcommand\tagform@[1]{}
+\makeatother
 
 \DeclareMathOperator\cis{cis}
 
-\title{12 Specialist Mathematics Summarised Notes \\ (Unofficial) \\ Work in Progress}
-\author{}
-\date{Last updated: 7 July 2022}
-
 
 \begin{document}
+
+\title{12 Specialist Mathematics Summarised Notes \\ (Unofficial) \\ Work in Progress}
+\author{}
+\date{Last updated: August 2022}
 \maketitle
+
+% Content begins below
 \begin{multicols*}{3}
 
 \section{Functions}
@@ -75,7 +90,7 @@
 
 	\dotfill
 	\subsection{Self-Inverse Functions}
-	An invertible function which is symmetrical about $y=x$.
+	An invertible function that is symmetrical about $y=x$.
 	\begin{align}
 		f^{-1}(x)=f(x)
 	\end{align}
@@ -99,7 +114,7 @@
 		\item When $f(x)\to \pm \infty,\ \frac{1}{f(x)}\to 0$
 	\end{itemize}
 	\underline{Invariant Points:}
-	\\Points which do not move under a transformation occurring at $y=\pm 1$.
+	\\Points that do not move under a transformation occurring at $y=\pm 1$.
 
 	\dotfill
 	\subsection{Rational Functions}
@@ -311,7 +326,7 @@
 	\begin{align}
 		\cis{\theta}=\cos{\theta}+i\sin{\theta}
 	\end{align}
-	A complex number $z$ has polar form
+	A complex number $z$ has the polar form
 	\begin{align}
 		z=|z|\cis{\theta}
 	\end{align}
@@ -538,7 +553,7 @@
 
 	\dotfill
 	\subsection{The Angle Between Two Vectors}
-	The angle $\theta$ between two vectors $\vb{a}$ and $\vb{b}$ cacn be found using
+	The angle $\theta$ between two vectors $\vb{a}$ and $\vb{b}$ can be found using
 	\begin{align}
 		\cos{\theta}=\frac{\vb{a}\cdot\vb{b}}{|\vb{a}||\vb{b}|}
 	\end{align}
@@ -565,9 +580,15 @@
 	\begin{itemize}
 		\item $\vb{a}\times\vb{b}$ is a vector perpendicular to both $\vb{a}$ and $\vb{b}$.
 		\item $\vb{a}\times\vb{a}=\vb{0}$ for all $\vb{a}$
+<<<<<<< HEAD
 		\item $\vb{a}\times\vb{b}=-\vb{b}\times\vb{a}$, $\therefore\vb{a}\times\vb{b}$ and $\vb{b}\times\vb{a}$ hav equal length but opposite direction.
 		\item $\vb{a}\cdot(\vb{b}\times\vb{c})$ is called the scalar triple prodcut.
 		\item $\vb{a}\times(\vb{b}+\vb{c})=\vb{a}\times\vb{b}+\vb{a}\times\vb{c}$
+=======
+		\item $\vb{a}\times\vb{b}=-\vb{b}\times\vb{a}$, $\therefore\vb{a}\times\vb{b}$ and $\vb{b}\times\vb{a}$ have equal length but opposite direction.
+		\item $\vb{a}\cdot(\vb{b}\times\vb{c})$ is called the scalar triple product.
+		\item $\vb{a}\times(\vb{b}\times\vb{c})=\vb{a}\times\vb{b}+\vb{a}\times\vb{c}$
+>>>>>>> 331edaf3f76b7bcbdd6aa353d3002e54ed5c1690
 		\item $(\vb{a}+\vb{b})\times(\vb{c}+\vb{d})\\=\vb{a}\times\vb{c}+\vb{a}\times\vb{d}+\vb{b}\times\vb{c}+\vb{b}\times\vb{d}$
 	\end{itemize}
 	\underline{Direction of $\vb{a}\times\vb{b}$}
@@ -602,7 +623,7 @@
 	\end{itemize}
 	\underline{Line Classification in 3 Dimensions}
 	\begin{itemize}
-		\item Lines are coplanar if the lie in the same plane. In this case they may be intersecting, parallel or coincident.
+		\item Lines are coplanar if they lie in the same plane. In this case, they may be intersecting, parallel or coincident.
 		\item Otherwise, they are skew.
 	\end{itemize}
 	\underline{Shortest Distance Between Skew Lines}
@@ -621,7 +642,7 @@
 	\begin{itemize}
 		\item $\vb{r}$ is the position vector of any point on the plane.
 		\item $\vb{a}$ is the position vector of a known point on the plane.
-		\item $\vb{v}$ and $\vb{w}$ are any two non-parallel vectors which are parallel to the plane.
+		\item $\vb{v}$ and $\vb{w}$ are any two non-parallel vectors that are parallel to the plane.
 		\item $s,t\in\mathbb{R}$ are two independent parameters.
 	\end{itemize}
 	\underline{The Normal of a Plane}\\
@@ -631,7 +652,7 @@
 	\end{align}
 	\underline{The Cartesian Equation of a Plane}\\
 	If a plane has normal vector $\vb{n}=\big(\begin{smallmatrix}a \\b \\c \end{smallmatrix}\big)$
-	and passes through $P(X,Y,Z)$ then is has equation
+	and passes through $P(X, Y, Z)$ then it has equation
 	\begin{align}
 		ax+by+cz=aX=bY=cZ=d
 	\end{align}
@@ -757,7 +778,7 @@
 	\end{flalign}
 
 	\dotfill
-	\subsection{Inverse Trigonomentric Functions}
+	\subsection{Inverse Trigonometric Functions}
 	\begin{flalign}
 		&\quad \int \frac{1}{\sqrt{1-x^2}}\,\dd{x} = \arcsin{x}+c&&\\
 		&\quad \int -\frac{1}{\sqrt{1-x^2}}\,\dd{x} = \arccos{x}+c&&\\
@@ -769,7 +790,7 @@
 
 	\dotfill
 	\subsection{Integrating $\sin^2{x}$ and $\cos^2{x}$}
-	Use double angle identities when integrating.
+	Use double-angle identities when integrating.
 	\begin{flalign}
 		&\quad \sin^2{x}=\frac{1}{2}-\frac{1}{2}\cos{2x}&&\\
 		&\quad \cos^2{x}=\frac{1}{2}+\frac{1}{2}\cos{2x}&&
