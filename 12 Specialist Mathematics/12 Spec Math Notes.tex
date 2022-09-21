@@ -880,7 +880,7 @@
 	\pagebreak
 	\section{Rates of Change and Differential Equations}
 	\subsection{Implicit Differentiation}
-	To find $\frac{dy}{dx}$ for an implicit relationship between $x$ and $y$. A useful property is
+	To find $\dv{y}{x}$ for an implicit relationship between $x$ and $y$. A useful property is
 	\begin{gather}
 		\begin{align}
 			\dv{x}\left[x^n\right]=nx^{n-1}
@@ -900,6 +900,18 @@
 
 	\dotfill
 	\subsection{Differential Equations of the Form $\dv{y}{x}=f(x)$}
+
+	\dotfill
+	\subsection{Seperable Differential Equations}
+
+	\dotfill
+	\subsection{Slope Fields}
+
+	\dotfill
+	\subsection{Problem Solving}
+
+	\dotfill
+	\subsection{Logistic Growth}
 	
 	\hrulefill
 
@@ -916,6 +928,60 @@
 	\begin{align}
 		|\vb{v}|=\sqrt{a^2+b^2}
 	\end{align}
+
+	\dotfill
+	\subsection{Pairs of Non-Uniformly Varying Quantities}
+	%\underline{Velocity}\\
+	For the moving object $P(x(t),y(t))$, the velocity vector is:
+	\begin{align}
+		\vb{v}=\begin{pmatrix}x'(t)\\ y'(t) \end{pmatrix}
+	\end{align}
+	and the speed is:
+	\begin{align}
+		\text{speed}=|\vb{v}|=\sqrt{\vb{v}\cdot \vb{v}}=\sqrt{\left[x'(t)\right]^2+\left[y'(t)\right]^2}
+	\end{align}
+	The gradient of the velocity vector at any point is:
+	\begin{align}
+		\frac{y'(t)}{x'(t)}=\frac{\left(\dv{y}{t}\right)}{\left(\dv{x}{t}\right)}=\dv{y}{t}\dv{t}{x}=\dv{y}{x}
+	\end{align}
+	The velocity vector is tangential to the curve, therefore the direction of motion is the gradient.
+
+	\dotfill
+	\subsection{B\`ezier Curves}
+	Given the starting point $(x_0,y_0)$ and the finishing point $(x_3,y_3)$, and control points $(x_1,y_1)$ and $(x_2,y_2)$, the B\`ezier curve has parametric equations:
+	\begin{gather}
+		\begin{align}
+			&x(t)=a_xt^3+b_xt^2+c_xt+d_x\\
+			&y(t)=a_yt^3+b_yt^2+c_yt+d_y,\\
+			&0\leq t\leq 1
+		\end{align}\\
+		where\\
+		\begin{cases}
+			a_x=x_3-3x_2+3x_1-x_0\\
+			b_x=3x_2-6x_1+3x_0\\
+			c_x=3x_1-3x_0\\
+			d_x=x_0
+		\end{cases}\\
+		and\\
+		\begin{cases}
+			a_y=y_3-3y_2+3y_1-y_0\\
+			b_y=3y_2-6y_1+3y_0\\
+			c_y=3y_1-3y_0\\
+			d_y=y_0
+		\end{cases}
+	\end{gather}
+	
+	\dotfill
+	\subsection{Trigonometric Parameterisation}
+
+	\dotfill
+	\subsection{Arc Lengths of Parametric Curves}
+	The length of the arc traced out by $P(x(t),y(t))$ from time $t=a$ to $t=b$ is:
+	\begin{align}
+		\int_{a}^{b}|\vb{v}|\,\dd{t}&=\int_{a}^{b}\sqrt{\vb{v}\cdot \vb{v}}\,\dd{t}\\
+		&=\int_{a}^{b}\sqrt{\left[x'(t)\right]^2+\left[y'(t)\right]^2}\,\dd{t}
+	\end{align}
+	\hrulefill
 
 \end{multicols*}
 \end{document}
