@@ -900,9 +900,22 @@
 
 	\dotfill
 	\subsection{Differential Equations of the Form $\dv{y}{x}=f(x)$}
+	Differential equations of the form $\dv{y}{x}=f(x)$ can be solved using integration.
+	\begin{align}
+		\dv{y}{x}&=f(x)\\
+		\dd{y}&=f(x)\, \dd{x}\\
+		\int \dd{y}&=\int f(x)\, \dd{x}\\
+		\therefore y&=\int f(x)\, \dd{x}
+	\end{align}
 
 	\dotfill
 	\subsection{Seperable Differential Equations}
+	Differential equations of the form \\$\dv{y}{x}=f(x)g(y)$ can be solved as follows:
+	\begin{align}
+		\dv{y}{x}&=f(x)g(y)\\
+		\frac{1}{g(y)}\, \dd{y}&=f(x)\, \dd{x}\\
+		\int \frac{1}{g(y)}\, \dd{y}&=\int f(x)\, \dd{x}
+	\end{align}
 
 	\dotfill
 	\subsection{Slope Fields}
