@@ -908,15 +908,21 @@
 	\subsection{Slope Fields}
 
 	\dotfill
-	\subsection{Problem Solving}
-
-	\dotfill
 	\subsection{Logistic Growth}
+	Logistic growth is defined by the differential equation
+	\begin{align}
+		\dv{P}{t}=kP\left(1-\frac{P}{A}\right)
+	\end{align}
+	The differential equation is solved with partial fractions using the identity:
+	\begin{align}
+		\frac{A}{P(A-P)}=\frac{1}{P}+\frac{1}{A-P}
+	\end{align}
 	
 	\hrulefill
 
 	\section{Vector Calculus}
 	\subsection{Parametric Equations}
+	Cartesian equation can be expressed in terms of a parameter such as $t$, defining $x$ and $y$ independently such that $x=x(t)$ and $y=y(t)$.
 
 	\dotfill
 	\subsection{Pairs of Uniformly Varying Quantities}
@@ -973,6 +979,16 @@
 	
 	\dotfill
 	\subsection{Trigonometric Parameterisation}
+	For an object $P$ moving with parametric equations
+	\begin{align}
+		x(t)=R\cos{\omega t},\quad y(t)=R\sin{\omega t},\quad t\geq 0
+	\end{align} 
+	where $R>0,\ \omega >0$:
+	\begin{itemize}
+		\item $R$ controls the radius of the path.
+		\item $\omega$ controls the rate of revolutions. The duration of a revolution is $\frac{2\pi}{\omega}$.
+		\item The speed of $P$ is $R\omega$.
+	\end{itemize}
 
 	\dotfill
 	\subsection{Arc Lengths of Parametric Curves}
