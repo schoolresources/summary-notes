@@ -746,7 +746,7 @@
 %		\int{u\dv{v}{x} \, \dd{x}} = uv - \int{v\dv{u}{x} \, \dd{x}}
 %	\end{align}
 
-\pagebreak
+%\pagebreak
 \section{Integration}
 \subsection{Indefinite Integrals}
 	\begin{flalign}
@@ -877,7 +877,7 @@
 
 	\hrulefill
 
-	\pagebreak
+	%\pagebreak
 	\section{Rates of Change and Differential Equations}
 	\subsection{Implicit Differentiation}
 	To find $\dv{y}{x}$ for an implicit relationship between $x$ and $y$. A useful property is
@@ -887,12 +887,20 @@
 		\end{align}\\
 		and\\
 		\begin{align}
-			\dv{x}\left[y^n\right]=nx^{n-1}\dv{y}{x}
+			\dv{x}\left[y^n\right]=ny^{n-1}\, \dv{y}{x}
 		\end{align}
 	\end{gather}
 
 	\dotfill
 	\subsection{Related Rates}
+	Two variables $x$ and $y$ may be related to each other and defined using an equation.
+	\begin{align}
+		\text{Eg:}\qquad x^2+y^2=5^2
+	\end{align}
+	The equation can be differentiated in respect to a third parameter $t$ resulting in a related rates equation.
+	\begin{align}
+		\text{Eg:}\qquad 2x\, \dv{x}{t}+2y\, \dv{y}{t}=0
+	\end{align}
 
 	\dotfill
 	\subsection{Differential Equations}
@@ -919,6 +927,7 @@
 
 	\dotfill
 	\subsection{Slope Fields}
+	For a differential equation $\dv{y}{x}=f(x,y)$, any point $(x,y)$ on the cartesian plane will have a gradient which can be graphically represented using a slope field.
 
 	\dotfill
 	\subsection{Logistic Growth}
@@ -966,8 +975,8 @@
 	The velocity vector is tangential to the curve, therefore the direction of motion is the gradient.
 
 	\dotfill
-	\subsection{B\`ezier Curves}
-	Given the starting point $(x_0,y_0)$ and the finishing point $(x_3,y_3)$, and control points $(x_1,y_1)$ and $(x_2,y_2)$, the B\`ezier curve has parametric equations:
+	\subsection{B\'ezier Curves}
+	Given the starting point $(x_0,y_0)$ and the finishing point $(x_3,y_3)$, and control points $(x_1,y_1)$ and $(x_2,y_2)$, the B\'ezier curve has parametric equations:
 	\begin{gather}
 		\begin{align}
 			&x(t)=a_xt^3+b_xt^2+c_xt+d_x\\
