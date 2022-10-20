@@ -55,12 +55,14 @@
 
 \DeclareMathOperator\cis{cis}
 
+\newcommand{\mbb}[1]{\mathbb{#1}}
+
 
 \begin{document}
 
 \title{12 Specialist Mathematics Summarised Notes \\ (Unofficial)}
 \author{}
-\date{}
+\date{Last updated: October 2022}
 \maketitle
 
 % Content begins below
@@ -97,7 +99,7 @@
 
 	\dotfill
 	\subsection{Reciprocal Functions}
-	A function of the form $f(x)=\cfrac{k}{x}$, where $k\neq 0$ is a constant.
+	A function of the form $f(x)=\cfrac{k}{x}$, where $k\in\mbb{R}\setminus \{0\}$.
 
 	\dotfill
 	\subsection{Reciprocal of Other Functions}
@@ -119,8 +121,8 @@
 	\dotfill
 	\subsection{Rational Functions}
 	Results from the division of one polynomial by another.\\
-	Vertical asymptote occurs when denominator is zero.\\
-	Horizontal asymptote ascertained from behaviour of graph as $|x|\to \infty$.
+	Vertical asymptote occurs when the denominator is zero.\\
+	Horizontal asymptote ascertained from the behaviour of graph as $|x|\to \infty$.
 	\begin{itemize}
 		\item If the degree of denominator $>$ numerator, horizontal asymptote at $y=0$.
 		\item If the degree of denominator $<$ numerator, function has slanted asymptote found through polynomial division.
@@ -256,18 +258,18 @@
 
 \section{Mathematical Induction}
 	\subsection{The Principle of Mathematical Induction}
-	Suppose $P_n$ is a proposition which is defined for every integer $n\geq a$, $a\in \mathbb{Z}$. If $P_a$ is true, and if $P_{k+1}$ is true whenever $P_k$ is true, then $P_n$ is true for all $n\geq a$.
+	Suppose $P_n$ is a proposition which is defined for every integer $n\geq a$, $a\in \mbb{Z}$. If $P_a$ is true, and if $P_{k+1}$ is true whenever $P_k$ is true, then $P_n$ is true for all $n\geq a$.
 
 	\hrulefill
 
 
 \section{Complex Numbers}
 	\subsection{Imaginary Numbers}
-	A number which cannot be placed on a real number line in the form $ai$ where $a\in \mathbb{R}$ and $i=\sqrt{-1}$.\\
+	A number which cannot be placed on a real number line in the form $ai$ where $a\in \mbb{R}$ and $i=\sqrt{-1}$.\\
 
 	\dotfill
 	\subsection{Complex Numbers}
-	Any number in the form $a+bi$ where $a,b\in \mathbb{R}$ and $i=\sqrt{-1}$.
+	Any number in the form $a+bi$ where $a,b\in \mbb{R}$ and $i=\sqrt{-1}$.
 	\begin{gather}
 		\begin{flalign}
 			&\text{If}\quad z=a+bi&&
@@ -306,7 +308,7 @@
 		\item $|z_1z_2|=|z_1||z_2|$
 		\item $\left|\frac{z_1}{z_2}\right|=\frac{|z_1|}{|z_2|},\ z_2\neq 0$
 		\item $|z_1z_2z_3\dots z_n|=|z_1||z_2||z_3|\dots |z_n|$
-		\item $|z^n|=|z|^n,\ n\in \mathbb{Z}^+$
+		\item $|z^n|=|z|^n,\ n\in \mbb{Z}^+$
 	\end{itemize}
 
 	\dotfill
@@ -339,7 +341,7 @@
 	\begin{itemize}
 		\item $\cis{\theta}\times \cis{\phi}=\cis{(\theta +\phi )}$
 		\item $\frac{\cis{\theta}}{\cis{\phi}}=\cis{(\theta -\phi )}$
-		\item $\cis{(\theta -2k\pi )}=\cis{\theta},\ k\in \mathbb{Z}$
+		\item $\cis{(\theta -2k\pi )}=\cis{\theta},\ k\in \mbb{Z}$
 	\end{itemize}
 
 	% NOTE: Not in the course
@@ -352,7 +354,7 @@
 	\dotfill
 	\subsection{De Moivre's Theorem}
 	\begin{align}
-		(|z|\cis{\theta})^n=|z|^n\cis{n\theta},\ \text{for all }n\in \mathbb{Q}
+		(|z|\cis{\theta})^n=|z|^n\cis{n\theta},\ \text{for all }n\in \mbb{Q}
 	\end{align}
 	\dotfill
 	\subsection{Roots of Complex Numbers}
@@ -416,7 +418,7 @@
 	
 	\dotfill
 	\subsection{The Fundamental Theorem of Algebra}
-	If $P(x)$ is a polynomial of degree $n$, then $P(x)$ has $n$ zeros, each in the form $a+bi$ where $a,b\in \mathbb{R}$, some of which may be repeated.
+	If $P(x)$ is a polynomial of degree $n$, then $P(x)$ has $n$ zeros, each in the form $a+bi$ where $a,b\in \mbb{R}$, some of which may be repeated.
 	
 	% TODO: Things not in the course can be highlighted in red to indicate extra content
 	% NOTE: Not in the course
@@ -516,7 +518,7 @@
 
 	%\dotfill
 	%\subsection{Dot Product (Scalar Product)}
-	%The algebraic definition of the dot product is defined as thus:
+	%The algebraic definition of the dot product is defined thus:
 	%\begin{equation}
 	%	\vb{a} \cdot \vb{b} = \sum_{i=1}^{n} a_i b_i
 	%\end{equation}
@@ -531,7 +533,7 @@
 	%	\item $\vb{a}\cdot\vb{b} = \vb{b}\cdot\vb{a}$
 	%	\item $\vb{a}\cdot\vb{a} = |\vb{a}|^2$
 	%	\item $\vb{a}\cdot(\vb{b}+\vb{c})=\vb{a}\cdot\vb{b}+\vb{a}\cdot\vb{c}$
-	%	\item $\lambda(\vb{a}\cdot\vb{b})=(\lambda\vb{a})\cdot\vb{b}=\vb{a}\cdot(\lambda\vb{b}), \,\lambda\in\mathbb{R}$
+	%	\item $\lambda(\vb{a}\cdot\vb{b})=(\lambda\vb{a})\cdot\vb{b}=\vb{a}\cdot(\lambda\vb{b}), \,\lambda\in\mbb{R}$
 	%\end{itemize}
 
 	\dotfill
@@ -548,7 +550,7 @@
 		\item $\vb{a}\cdot\vb{a} = |\vb{a}|^2$
 		\item $\vb{a}\cdot(\vb{b}+\vb{c})=\vb{a}\cdot\vb{b}+\vb{a}\cdot\vb{c}$
 		\item $(\vb{a}+\vb{b})\cdot(\vb{c}+\vb{d})=\vb{a}\cdot\vb{c}+\vb{a}\cdot\vb{d}+\vb{b}\cdot\vb{c}+\vb{b}\cdot\vb{d}$
-		\item $k(\vb{a}\cdot\vb{b})=(k\vb{a})\cdot\vb{b}=\vb{a}\cdot(k\vb{b}), \,k\in\mathbb{R}$
+		\item $k(\vb{a}\cdot\vb{b})=(k\vb{a})\cdot\vb{b}=\vb{a}\cdot(k\vb{b}), \,k\in\mbb{R}$
 	\end{itemize}
 
 	\dotfill
@@ -578,7 +580,7 @@
 	\end{gather}
 	\underline{Properties}
 	\begin{itemize}
-		\item $\vb{a}\times\vb{b}$ is a vector perpendicular to both $\vb{a}$ and $\vb{b}$.
+		\item $\vb{a}\times\vb{b}$ is a vector perpendicular (the normal vector) to both $\vb{a}$ and $\vb{b}$.
 		\item $\vb{a}\times\vb{a}=\vb{0}$ for all $\vb{a}$.
 		\item $\vb{a}\times\vb{b}=-\vb{b}\times\vb{a}$, $\therefore\vb{a}\times\vb{b}$ and $\vb{b}\times\vb{a}$ have equal length but opposite direction.
 		\item $\vb{a}\cdot(\vb{b}\times\vb{c})$ is called the scalar triple product.
@@ -598,7 +600,7 @@
 	
 	\dotfill
 	\subsection{Lines in 2 and 3 Dimensions}
-	$\vb{r}=\vb{a}+\lambda\vb{b},\ \lambda\in\mathbb{R}$ is the vector equation of the line.
+	$\vb{r}=\vb{a}+\lambda\vb{d},\ \lambda\in\mbb{R}$ is the vector equation of the line. $\vb{a}$ is the position vector while $\vb{d}$ is the direction vector.
 
 	\dotfill
 	\subsection{The Shortest Distance From a Point to a Line}
@@ -637,7 +639,7 @@
 		\item $\vb{r}$ is the position vector of any point on the plane.
 		\item $\vb{a}$ is the position vector of a known point on the plane.
 		\item $\vb{v}$ and $\vb{w}$ are any two non-parallel vectors that are parallel to the plane.
-		\item $s,t\in\mathbb{R}$ are two independent parameters.
+		\item and $s,t\in\mbb{R}$ are two independent parameters.
 	\end{itemize}
 	\underline{The Normal of a Plane}\\
 	A vector is normal to a plane if it is perpendicular to all vectors which are parallel to the plane. If $\vb{n}$ is a normal to a plane such as $\vb{n}=\vb{v}\times\vb{w}$, an equivalent vector equation of a plane is
@@ -646,7 +648,7 @@
 	\end{align}
 	\underline{The Cartesian Equation of a Plane}\\
 	If a plane has normal vector $\vb{n}=\big(\begin{smallmatrix}a \\b \\c \end{smallmatrix}\big)$
-	and passes through $P(X, Y, Z)$ then it has equation
+	and passes through $P(X, Y, Z)$ then it has the equation
 	\begin{align}
 		ax+by+cz=aX+bY+cZ=d
 	\end{align}
@@ -690,7 +692,7 @@
 			\end{array}
 		\right]
 	\end{align}
-	Using row operations it is reduced to the echelon form.
+	Using row operations, it is reduced to the echelon form.
 	\begin{align}
 		\left[
 			\begin{array}{ccc|c}
@@ -885,7 +887,7 @@
 		\begin{align}
 			\dv{x}\left[x^n\right]=nx^{n-1}
 		\end{align}\\
-		and\\
+		\text{and}\\
 		\begin{align}
 			\dv{x}\left[y^n\right]=ny^{n-1}\, \dv{y}{x}
 		\end{align}
@@ -897,9 +899,9 @@
 	\begin{align}
 		\text{Eg:}\qquad x^2+y^2=5^2
 	\end{align}
-	The equation can be differentiated in respect to a third parameter $t$ resulting in a related rates equation.
+	The equation can be differentiated with respect to a third parameter $t$ resulting in a related rates equation.
 	\begin{align}
-		\text{Eg:}\qquad 2x\, \dv{x}{t}+2y\, \dv{y}{t}=0
+		\text{E.g.:}\qquad 2x\, \dv{x}{t}+2y\, \dv{y}{t}=0
 	\end{align}
 
 	\dotfill
@@ -917,7 +919,7 @@
 	\end{align}
 
 	\dotfill
-	\subsection{Seperable Differential Equations}
+	\subsection{Separable Differential Equations}
 	Differential equations of the form \\$\dv{y}{x}=f(x)g(y)$ can be solved as follows:
 	\begin{align}
 		\dv{y}{x}&=f(x)g(y)\\
